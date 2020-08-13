@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Oreno CSS</title>
+
+    <script src="https://kit.fontawesome.com/a1763a7d6f.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="main">
+      <header>
+        <nav>
+          <ul>
+            <li><i class="hamburger fas fa-bars" onclick="openNav()"></i></li>
+            <li class="logo">
+              <img src="logo-240x100.png" width="120" height="50" alt="logo"></img>
+            </li>
+            <li><i class="fas fa-sign-out-alt"></i></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="container"><i class="fab fa-twitter"></i></div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+  </body>
+
+</html>
+
+<style>
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  padding: 5px 20px;
+  background-color: black;
+  position: sticky;
+  top: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li i {
+  font-size: 24px;
+  color: gray;
+}
+
+.logo {
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 128px;
+  height: 100vh;
+  color: #00acee;
+}
+
+/* ------------ */
+
+.hamburger {
+  cursor:pointer;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 80px;
+  opacity: 50%;
+}
+
+.sidenav a {
+  padding: 0px 8px 8px 32px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  font-size: 20px;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav a i {
+  font-size: 24px;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  margin-left: 50px;
+}
+
+#main {
+  position: relative;
+  transition: 0.3s;
+  left: 0;
+}
+
+/*
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+*/
+
+</style>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.left = "250px"; 
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.left = "0"; 
+  document.body.style.backgroundColor = "white";
+}
+
+</script>
+
