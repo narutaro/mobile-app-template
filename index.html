@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Oreno CSS</title>
+    <title>Mobile App Template</title>
 
     <script src="https://kit.fontawesome.com/a1763a7d6f.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -16,8 +16,8 @@
         <nav>
           <ul>
             <li><i class="hamburger fas fa-bars" onclick="openNav()"></i></li>
-            <li class="logo">
-              <img src="logo-240x100.png" width="120" height="50" alt="logo"></img>
+            <li class="logo-layout">
+              <div class="logo">LOGO</div>
             </li>
             <li><i class="fas fa-sign-out-alt"></i></li>
           </ul>
@@ -70,9 +70,20 @@ nav ul li i {
   color: gray;
 }
 
-.logo {
+.logo-layout {
   margin: 0 auto;
-  display: inline-block;
+}
+
+.logo {
+  height: 30px;
+  width: 100px;
+  color: gray;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+  font-weight: bold;
+  border: solid 2px gray;
+  border-radius: 15px;
 }
 
 .container {
